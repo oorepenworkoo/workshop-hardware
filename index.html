@@ -15,15 +15,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    <script src="Temp.js"></script>
-    <script src="sunlight.js"></script>
 </head>
 
 <style>
     body {
         background-image: url(http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg);
         background-repeat: repeat;
-        background-attachment: fixed; 
+        background-attachment: fixed;
     }
 </style>
 
@@ -54,8 +52,8 @@
                             <li><a href="#">Informes</a></li> -->
                     <!-- </ul>
                     </li> -->
-                    <li><a href="person.html"><span class="glyphicon glyphicon-user"></span></a></li>
-                    <li><a href="temp.html"><span class="glyphicon glyphicon-cloud"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cloud"></span></a></li>
                     <li><a href="#"><span class="showopacity glyphicon glyphicon-adjust"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-flash"></span></a></li>
 
@@ -71,6 +69,7 @@
             <!-- <img src="http://i.imgur.com/GUnt3yw.gif"> -->
         </div>
     </center>
+
 
     <div id="display">
 
@@ -129,7 +128,7 @@
                     <div class="caption">
                         <center>
                             <h3>Person</h3>
-                            <p><span id="personResult"></span> person in house</p>
+                            <p><span id="personResult"></span> people in house</p>
                         </center>
                     </div>
                 </div>
@@ -143,10 +142,7 @@
                     <div class="caption">
                         <center>
                             <h3>Temp</h3>
-                            <p><span id="tempCelsiusResult">0</span> Celcius</p>
-                            <p><span id="tempRomerResult">0</span> Romer</p>
-                            <p><span id="tempKelvinResult">0</span> Kelvin</p>
-                            <p><span id="tempFahrenheitResult">0</span> Fahrenheit</p>
+                            <p>0 Celcius</p>
                         </center>
                     </div>
                 </div>
@@ -160,27 +156,27 @@
                     <div class="caption">
                         <center>
                             <h3>Sunlight</h3>
-                            <span id="sunlightResult">Dark</span></p>
+                            <p>0 Candela</p>
                         </center>
                     </div>
                 </div>
             </div>
         </div>
 
-        
-
     </div>
 
-    <div id="auto">
-    <div class="autobutton">
-        <div class="col-sm-3 col-md-2">
-            <li class="list-group-item">Auto Control<br><br><center><label class="switch" >
-            <input type="checkbox"><span class="slider round"></span></label></center></li>
+    <center>
+        <div id="auto">
+            <div class="autobutton">
+                <div class="col-sm-3 col-md-2">
+                    <li class="list-group-item">Auto Control<br><br>
+                        <label class="switch">
+            <input type="checkbox"><span class="slider round"></span></label>
+                    </li>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-
-
+    </center>
 
 </body>
 
