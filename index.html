@@ -15,6 +15,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="Temp.js"></script>
+    <script src="sunlight.js"></script>
 </head>
 
 <style>
@@ -141,7 +143,10 @@
                     <div class="caption">
                         <center>
                             <h3>Temp</h3>
-                            <p>0 Celcius</p>
+                            <p><span id="tempCelsiusResult">0</span> Celcius</p>
+                            <p><span id="tempRomerResult">0</span> Romer</p>
+                            <p><span id="tempKelvinResult">0</span> Kelvin</p>
+                            <p><span id="tempFahrenheitResult">0</span> Fahrenheit</p>
                         </center>
                     </div>
                 </div>
@@ -155,7 +160,7 @@
                     <div class="caption">
                         <center>
                             <h3>Sunlight</h3>
-                            <p>0 Candela</p>
+                            <span id="sunlightResult">Dark</span></p>
                         </center>
                     </div>
                 </div>
