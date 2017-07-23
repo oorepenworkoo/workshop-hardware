@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
-    var linkPerson = "http://158.108.165.223/data/chat/groupZeedUpPerson";
-    var linkTemperature = "http://158.108.165.223/data/chat/groupZeedUpTemperature";
-    var linkDoor = "http://158.108.165.223/data/chat/groupZeedUpDoor";
-    var linkLight = "http://158.108.165.223/data/chat/groupZeedUpLight";
-    var linkAir = "http://158.108.165.223/data/chat/groupZeedUpAir";
+    var linkHumidity = "http://158.108.165.223/data/groupZeedUp/Humidity";
+    var linkPerson = "http://158.108.165.223/data/groupZeedUp/Person";
+    var linkTemperature = "http://158.108.165.223/data/groupZeedUp/Temperature";
+    var linkDoor = "http://158.108.165.223/data/groupZeedUp/DegreeOfDoor02";
+    var linkLight = "http://158.108.165.223/data/groupZeedUp/LED02";
+    var linkAir = "http://158.108.165.223/data/groupZeedUp/Air";
 
-    
-
+// คน ----------------------------------------------------------
+    // อัพเดตข้อมูล จำนวนคน
     setInterval(function() {
         $.ajax( {
             url: linkPerson
@@ -20,12 +21,14 @@ $(document).ready(function() {
         });
     } , 1000 * 1);
 
-    var lightIsOn = false;
+// หลอดไฟ ----------------------------------------------------------
+    // อัพเดตข้อมูล ไฟเปิดหรือปิด
+    var lightIsOn = 0;
     lightFunction = function() {
         $.ajax({
             url: linkLight
         }).done(function(data) {
-            if (lightIsOn === true) {
+            if (lightIsOn === 1) {
                 $('#light').text("On");
             }else {
                 $('#light').text("Off");
@@ -38,26 +41,30 @@ $(document).ready(function() {
     lightFunction();
     
 
+    // เวลา ปุ่มเปิดไฟ ถูกกด
     $('#lightOn').click(function (data) {
         
-        lightIsOn = true;
+        lightIsOn = 1;
         lightFunction();
         
     });
 
+    // เวลา ปุ่มปิดไฟ ถูกกด
     $('#lightOff').click(function (data) {
         
-        lightIsOn = false;
+        lightIsOn = 0;
         lightFunction();
         
     });
 
-    var doorIsOpen = false;
+// ประตู ----------------------------------------------------------
+    // อัพเดตข้อมูล ประตู
+    var doorIsOpen = 0;
     doorFunction = function() {
         $.ajax( {
             url: linkDoor
         }).done(function(data) {
-            if (doorIsOpen === true) {
+            if (doorIsOpen === 1) {
                 $('#door').text("Open");
             }else {
                 $('#door').text("Close");
@@ -68,26 +75,32 @@ $(document).ready(function() {
     }
     doorFunction();
 
+
+    // เวลา ปุ่มเปิดประตู ถูกกด
     $('#openDoor').click(function (data) {
 
-        doorIsOpen = true;
+        doorIsOpen = 1;
         doorFunction();
 
     });
 
+
+    // เวลา ปุ่มปิดประตู ถูกกด
     $('#closeDoor').click(function(data) {
 
-        doorIsOpen = false;
+        doorIsOpen = 0;
         doorFunction();
 
     });
 
-    var airIsOn = false;
+// แอร์ ----------------------------------------------------------
+    // อัพเดตข้อมูล แอร์
+    var airIsOn = 0;
     airFunction = function() {
         $.ajax( {
             url: linkAir
         }).done(function(data) {
-           if(airIsOn === true) {
+           if(airIsOn === 1) {
                $('#air').text("On");
            }else {
                $('#air').text("Off");
@@ -98,18 +111,44 @@ $(document).ready(function() {
     }
     airFunction();
 
+
+    // เวลา ปุ่มเปิดแอร์ ถูกกด
     $('#onAir').click(function(data) {
 
-        airIsOn = true;
+        airIsOn = 1;
         airFunction();
 
     });
 
+
+    // เวลา ปุ่มปิดแอร์ ถูกปเิด
     $('#offAir').click(function(data) {
 
-        airIsOn = false;
+        airIsOn = 0;
         airFunction();
 
     });
+
+// ความเข้มแสง ----------------------------------------------------------
+
+    var linkSunlight="http://158.108.165.223/data/groupZeedUp/Light";
+  setInterval(function(){
+    $.ajax({
+      url : linkSunlight
+    }).done(function(data){
+      var light = data;
+      if (data === 1) {
+        var k = "Bright";
+      console.log(k);
+      $('#sunlightResult').text(k);
+      } else {
+        var s = "Dark";
+      console.log(s);
+        $('#sunlightResult').text(s);
+      }
+    }).fail(function(data){
+      console.log("Failed please try again...");
+    })
+  },1000*1);
 
 });

@@ -4,13 +4,13 @@ $(document).ready(function(){
     $.ajax({
       url : link
     }).done(function(data){
-      var light=data;
+      var light = data;
       if (data === 1) {
-        var k = "Dark";
+        var k = "Bright";
       console.log(k);
       $('#sunlightResult').text(k);
       } else {
-        var s = "Bright";
+        var s = "Dark";
       console.log(s);
         $('#sunlightResult').text(s);
       }
