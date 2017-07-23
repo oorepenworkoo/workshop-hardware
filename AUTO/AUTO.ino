@@ -1,11 +1,11 @@
-#define LED 2
+#define AIRCON 2
 int sensorPin = A0;
 int sensorValue = 0;
 
 void setup() {
   Serial.begin(9600);
   pinMode(A0,INPUT);
-  pinMode(LED,OUTPUT);
+  pinMode(AIRCON,OUTPUT);
 }
 
 void loop() {
@@ -17,9 +17,9 @@ void loop() {
 }
 void autoOPEN(){
   if(sensorValue > 400)//dark have to open light
-    digitalWrite(LED,HIGH);
+    digitalWrite(AIRCON,HIGH);
   else
-    digitalWrite(LED,LOW);
+    digitalWrite(AIRCON,LOW);
 }
 
 
