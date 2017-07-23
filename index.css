@@ -1,15 +1,14 @@
 body,
 html {
   height: 100%;
-  background-color: black;
 }
 
 nav.sidebar,
 .main {
-  -webkit-transition: margin 200ms ease-out;
-  -moz-transition: margin 200ms ease-out;
-  -o-transition: margin 200ms ease-out;
-  transition: margin 200ms ease-out;
+  -webkit-transition: margin 10ms ease-out;
+  -moz-transition: margin 10ms ease-out;
+  -o-transition: margin 10ms ease-out;
+  transition: margin 10ms ease-out;
 }
 
 .main {
@@ -20,11 +19,11 @@ nav.sidebar,
   .main {
     position: absolute;
     width: calc(100% - 40px);
-    margin-left: 40px;
+    margin-left: 0px;
     float: right;
   }
   nav.sidebar:hover+.main {
-    margin-left: 200px;
+    margin-left: 10px;
   }
   nav.sidebar.navbar.sidebar>.container .navbar-brand,
   .navbar>.container-fluid .navbar-brand {
@@ -63,7 +62,7 @@ nav.sidebar,
     color: #777;
   }
   nav.sidebar {
-    width: 200px;
+    width: 50px;
     height: 100%;
     margin-left: -160px;
     float: left;
@@ -109,9 +108,10 @@ section {
 }
 
 #display {
-  float: right;
+  float: center; 
   margin-top: 50px;
-  margin-right: 50px;
+  margin-right: 20px;
+  margin-left: 100px;
 }
 
 #welcome {
@@ -177,8 +177,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-#show-left {
-  margin-top: 50px;
-  margin-left: 100px;
-  float: left;
+#auto {
+  
 }
+

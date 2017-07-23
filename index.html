@@ -20,6 +20,8 @@
 <style>
     body {
         background-image: url(http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg);
+        background-repeat: repeat;
+        background-attachment: fixed;
     }
 </style>
 
@@ -37,7 +39,7 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
                     <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Status<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-chevron-down"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
@@ -50,10 +52,10 @@
                             <li><a href="#">Informes</a></li> -->
                     <!-- </ul>
                     </li> -->
-                    <li><a href="person.html">Person<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                    <li><a href="temp.html">Temperature<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cloud"></span></a></li>
-                    <li><a href="#">Sunlight<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-adjust"></span></a></li>
-                    <li><a href="#">Light<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-flash"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cloud"></span></a></li>
+                    <li><a href="#"><span class="showopacity glyphicon glyphicon-adjust"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-flash"></span></a></li>
 
                 </ul>
             </div>
@@ -68,10 +70,11 @@
         </div>
     </center>
 
+
     <div id="display">
 
         <div class="light">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-3 col-md-2">
                 <div class="thumbnail">
                     <img src="https://www.galabee.com/public/admin/1%20mobile%20suggestions.png" width="512px" width="512px">
                     <div class="caption">
@@ -87,7 +90,7 @@
         </div>
 
         <div class="door">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-3 col-md-2">
                 <div class="thumbnail">
                     <img src="https://www.shareicon.net/data/512x512/2016/08/19/816660_hotel_512x512.png" width="512px" width="512px">
                     <div class="caption">
@@ -103,7 +106,7 @@
         </div>
 
         <div class="air-con">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-3 col-md-2">
                 <div class="thumbnail">
                     <img src="https://www.shareicon.net/data/512x512/2016/07/06/791943_home_512x512.png" width="512px" width="512px">
                     <div class="caption">
@@ -119,13 +122,13 @@
         </div>
 
         <div class="person">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-3 col-md-2">
                 <div class="thumbnail">
                     <img src="https://www.shareicon.net/data/512x512/2015/10/03/111420_help_512x512.png" width="512px" width="512px">
                     <div class="caption">
                         <center>
                             <h3>Person</h3>
-                            <p><span id="personResult"></span> person in house</p>
+                            <p><span id="personResult"></span> people in house</p>
                         </center>
                     </div>
                 </div>
@@ -133,16 +136,13 @@
         </div>
 
         <div class="temperature">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-3 col-md-2">
                 <div class="thumbnail">
                     <img src="https://cdn2.iconfinder.com/data/icons/flat-icons-19/512/Thermometre.png" width="512px" width="512px">
                     <div class="caption">
                         <center>
                             <h3>Temp</h3>
-                            <p><span id="tempCelsiusResult">0</span> Celcius</p>
-                            <p><span id="tempRomerResult">0</span> Romer</p>
-                            <p><span id="tempKelvinResult">0</span> Kelvin</p>
-                            <p><span id="tempFahrenheitResult">0</span> Fahrenheit</p>
+                            <p>0 Celcius</p>
                         </center>
                     </div>
                 </div>
@@ -150,13 +150,13 @@
         </div>
 
         <div class="sunlight">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-3 col-md-2">
                 <div class="thumbnail">
                     <img src="https://www.shareicon.net/data/512x512/2016/09/01/823373_sun_512x512.png" width="512px" width="512px">
                     <div class="caption">
                         <center>
                             <h3>Sunlight</h3>
-                            <span id="sunlightResult">Dark</span></p>
+                            <p>0 Candela</p>
                         </center>
                     </div>
                 </div>
@@ -165,12 +165,18 @@
 
     </div>
 
-    <div id="show-left">
-            <li class="list-group-item">Auto Control<label class="switch" ><input type="checkbox"><span class="slider round"></span></label></li>
-    </div>
-
-
-
+    <center>
+        <div id="auto">
+            <div class="autobutton">
+                <div class="col-sm-3 col-md-2">
+                    <li class="list-group-item">Auto Control<br><br>
+                        <label class="switch">
+            <input type="checkbox"><span class="slider round"></span></label>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </center>
 
 </body>
 
