@@ -2,32 +2,43 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>content</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <h1 style="text-align:center;">Welcome to Smart Home</h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>content</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <h1 style="text-align:center;">Welcome to Smart Home</h1>
+  <script src="content.js"></script>
 </head>
 <aside>
   <ul class="nav nav-pills nav-stacked col-lg-2">
-  <li role="presentation"><a href="#"><a href="#C1">Light</a></a></li>
-  <li role="presentation"><a href="#"><a href="#C2">Person</a></a></li>
-  <li role="presentation"><a href="#"><a href="#C3">Door</a></a></li>
-  <li role="presentation"><a href="#"><a href="#C4">Temperature</a></a></li>
-  <li role="presentation"><a href="#"><a href="#C5">Air-Condition</a></a></li>
-</ul>
+    <li role="presentation"><a href="#"><a href="#C1">Light</a></a>
+    </li>
+    <li role="presentation"><a href="#"><a href="#C2">Person</a></a>
+    </li>
+    <li role="presentation"><a href="#"><a href="#C3">Door</a></a>
+    </li>
+    <li role="presentation"><a href="#"><a href="#C4">Temperature</a></a>
+    </li>
+    <li role="presentation"><a href="#"><a href="#C5">Air-Condition</a></a>
+    </li>
+  </ul>
 </aside>
+
 <body>
   <h2 id="C1"></h2>
-  <h3 id="C2"><span class="glyphicon">&#xe008;</span>Person:</h3>
+  <h3 id="C2"><span class="glyphicon">&#xe008 Person:</span><span id="personResult"></span></h3>
   <h4 id="C3"></h4>
-  <h5 id="C4"><i class="fa fa-thermometer-3" style="font-size:48px;color:red"></i>Temerature: Celsius</h5>
+  <h5 id="C4"><i class="fa fa-thermometer-3" style="font-size:48px;color:red"></i>Temperature: Celsius</h5>
   <h6 id="C5"></h6>
 </body>
+
 </html>
