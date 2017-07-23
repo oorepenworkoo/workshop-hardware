@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+
+<style>
+    body {
+        background-image: url(http://www.designbolts.com/wp-content/uploads/2013/02/Noise-Light-Grey-Tileable-Pattern-For-Website-Background.jpg);
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-default sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <spa></spa>n class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Status<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-chevron-down"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="{{URL::to('createusuario')}}">Person</a></li>
+                            <li><a href="#">Light</a></li>
+                            <li><a href="#">Temperature</a></li>
+                            <!-- <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Informes</a></li> -->
+                    <!-- </ul>
+                    </li> -->
+                    <li><a href="person.html">Person<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="temp.html">Temperature<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cloud"></span></a></li>
+                    <li><a href="#">Sunlight<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-adjust"></span></a></li>
+                    <li><a href="#">Light<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-flash"></span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <center>
+        <div id="welcome">
+            <h1><br>Welcome to Smart Home</h1>
+            <h3>ZeedUp UpDown UpDown UpDown UpDown</h3>
+            <!-- <img src="http://i.imgur.com/GUnt3yw.gif"> -->
+        </div>
+    </center>
+
+    <div id="display">
+
+        <div class="light">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="https://www.galabee.com/public/admin/1%20mobile%20suggestions.png" width="512px" width="512px">
+                    <div class="caption">
+                        <center>
+                            <h3>Light</h3>
+                            <p>Light is <span id="light"></span></p>
+                            <p><a class="btn btn-success" id="lightOn" role="button"><span class="glyphicon glyphicon-off"></span></a>
+                                <a class="btn btn-danger" id="lightOff" role="button"><span class="glyphicon glyphicon-off"></span></a></p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="door">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="https://www.shareicon.net/data/512x512/2016/08/19/816660_hotel_512x512.png" width="512px" width="512px">
+                    <div class="caption">
+                        <center>
+                            <h3>Door</h3>
+                            <p>Door is <span id="door"></span></p>
+                            <p><a class="btn btn-success" id="openDoor" role="button"><span class="glyphicon glyphicon-off"></span></a>
+                                <a class="btn btn-danger" id="closeDoor" role="button"><span class="glyphicon glyphicon-off"></span></a></p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="air-con">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="https://www.shareicon.net/data/512x512/2016/07/06/791943_home_512x512.png" width="512px" width="512px">
+                    <div class="caption">
+                        <center>
+                            <h3>Air Con</h3>
+                            <p>Air Con is <span id="air"></span></p>
+                            <p><a class="btn btn-success" id="onAir" role="button"><span class="glyphicon glyphicon-off"></span></a>
+                                <a class="btn btn-danger" id="offAir" role="button"><span class="glyphicon glyphicon-off"></span></a></p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="person">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="https://www.shareicon.net/data/512x512/2015/10/03/111420_help_512x512.png" width="512px" width="512px">
+                    <div class="caption">
+                        <center>
+                            <h3>Person</h3>
+                            <p><span id="personResult"></span> person in house</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="temperature">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="https://cdn2.iconfinder.com/data/icons/flat-icons-19/512/Thermometre.png" width="512px" width="512px">
+                    <div class="caption">
+                        <center>
+                            <h3>Temp</h3>
+                            <p>0 Celcius</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sunlight">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="https://www.shareicon.net/data/512x512/2016/09/01/823373_sun_512x512.png" width="512px" width="512px">
+                    <div class="caption">
+                        <center>
+                            <h3>Sunlight</h3>
+                            <p>0 Candela</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="show-left">
+            <li class="list-group-item">Auto Control<label class="switch" ><input type="checkbox"><span class="slider round"></span></label></li>
+    </div>
+
+
+
+
+</body>
+
+</html>
