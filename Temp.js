@@ -7,17 +7,17 @@ setInterval(function(){
     url: link
   }).done(function(data){
     var C = data;
-    var R = data*4/5;
-    var K = data*1+273;
-    var F = data*9/5+32;
+    var R = data*(4/5.0);
+    var K = (data*1)+273;
+    var F = (data*9.0)/5+32;
     console.log(C);
     console.log(R);
     console.log(K);
     console.log(F);
-    $('#TempC').text(C);
-    $('#TempR').text(R);
-    $('#TempK').text(K);
-    $('#TempF').text(F);
+    $('#tempCelsiusResult').text( C );
+    $('#tempRomerResult').text( R );
+    $('#tempKelvinResult').text( K );
+    $('#tempFahrenheitResult').text( F );
   }).fail(function(data){
     console.log("Failed please try again...");
   })

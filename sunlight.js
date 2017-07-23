@@ -5,14 +5,14 @@ $(document).ready(function(){
       url : link
     }).done(function(data){
       var light=data;
-      if (data===1) {
-        var k="Dark";
+      if (data === 1) {
+        var k = "Dark";
       console.log(k);
-      $('#Status').text(k);
+      $('#sunlightResult').text(k);
       } else {
-        var s="Bright";
+        var s = "Bright";
       console.log(s);
-        $('#Status').text(s);
+        $('#sunlightResult').text(s);
       }
     }).fail(function(data){
       console.log("Failed please try again...");
@@ -20,4 +20,4 @@ $(document).ready(function(){
 
 
   },1000*1)
-})
+});
